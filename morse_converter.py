@@ -84,9 +84,7 @@ def decrypt(encrypted_message: str) -> str:
 
     decrypted_message = ""
     for word in encrypted_message.split("       "):
-        print(word)
         for letter in word.split("   "):
-            print(letter.strip())
             try:
                 decrypted_message += MORSE_TO_TEXT[letter]
             except KeyError as exc:
